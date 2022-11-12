@@ -34,7 +34,7 @@ export const Navbar = () => {
       <Sidebar navItem={navItem} showNav={showNav}></Sidebar>
 
       {/* Navigation for tablet screen or higher */}
-      <div className="hidden md:flex md:gap-10 xl:gap-4">
+      <div className="hidden md:flex md:gap-10">
         {navItem.map((item) => (
           <Link name={item.name} key={item.name} />
         ))}
