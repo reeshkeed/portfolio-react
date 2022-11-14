@@ -1,6 +1,4 @@
-import burger from '@assets/burger.svg';
-import { Link } from '@components/base/Link';
-import { useState } from 'react';
+import { BaseLink } from '@components/base/BaseLink';
 
 interface Props {
   navItem?: Array<{
@@ -17,7 +15,7 @@ export const Sidebar = ({ navItem, showNav }: Props) => {
       }`}
     >
       {navItem &&
-        navItem.map((item) => <Link name={item.name} key={item.name} />)}
+        navItem.map((item) => <BaseLink name={item.name} key={item.name} />)}
     </aside>
   );
 };

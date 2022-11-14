@@ -1,8 +1,8 @@
 import logo from '@assets/logo.svg';
-import { Link } from '@components/base/Link';
+import { BaseLink } from '@components/base/BaseLink';
 import { useState } from 'react';
-import { Sidebar } from '../Sidebar/Sidebar';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { Sidebar } from '../Sidebar/Sidebar';
 
 const navItem = [
   { name: 'Home' },
@@ -19,10 +19,11 @@ export const Navbar = () => {
       <div className="flex justify-between items-center max-w-screen-xl mx-auto p-8 xl:p-12">
         <img className="w-10 xl:w-14 z-10" src={logo} alt="Girish Daloso" />
 
-        {/* Hamburger button for sidebar*/}
+        {/* Hamburger button for sidebar */}
         <button
           className="z-10 md:hidden"
           onClick={() => setShowNav((prevValue) => !prevValue)}
+          type="button"
         >
           {showNav ? (
             <XMarkIcon className="h-6 w-6 text-white" />
@@ -32,12 +33,12 @@ export const Navbar = () => {
         </button>
 
         {/* Sidebar: Navigation for smaller screen */}
-        <Sidebar navItem={navItem} showNav={showNav}></Sidebar>
+        <Sidebar navItem={navItem} showNav={showNav} />
 
         {/* Navigation for tablet screen or higher */}
         <div className="hidden md:flex md:gap-10">
           {navItem.map((item) => (
-            <Link name={item.name} key={item.name} />
+            <BaseLink name={item.name} key={item.name} />
           ))}
         </div>
       </div>
