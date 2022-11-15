@@ -1,0 +1,4 @@
+.spinning-logo {
+  @apply absolute h-auto w-[40rem] md:w-[65rem] xl:w-[85rem] animate-spin-slow max-w-none
+  -z-10 top-[40rem] md:top-[30rem] -right-72 md:-right-[35rem] xl:-right-[30rem] opacity-40;
+}

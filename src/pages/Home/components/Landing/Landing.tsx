@@ -1,11 +1,6 @@
-import logo from '@assets/logo.svg';
-import styles from './Landing.module.css';
-
 export const Landing = () => {
   return (
-    <section className="h-screen relative overflow-x-hidden">
-      <img className={styles['spinning-logo']} src={logo} alt="Girish Daloso" />
-
+    <section className="h-screen overflow-x-hidden">
       <div className="h-full max-w-screen-xl mx-auto flex flex-col justify-center px-8 gap-[6rem] md:px-24 xl:gap-[8rem]">
         <div className="grid gap-2 md:gap-4">
           <p className="text-dark-100 text-lg md:text-xl xl:text-2xl">

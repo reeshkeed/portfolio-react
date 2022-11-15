@@ -1,0 +1,3 @@
+.scrolled {
+  @apply bg-dark-900 fixed p-4;
+}

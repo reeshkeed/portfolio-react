@@ -6,6 +6,7 @@ const aliases = {
   '@assets': resolve(__dirname, './src/assets'),
   '@pages': resolve(__dirname, './src/pages'),
   '@components': resolve(__dirname, './src/components'),
+  '@hooks': resolve(__dirname, './src/hooks'),
 };
 
 // https://vitejs.dev/config/

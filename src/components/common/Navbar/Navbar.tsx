@@ -2,7 +2,9 @@ import logo from '@assets/logo.svg';
 import { BaseLink } from '@components/base/BaseLink';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import { Sidebar } from '../Sidebar/Sidebar';
+import { useScrollPosition } from '@hooks/useScrollPosition';
+import { Sidebar } from '@components/common/Sidebar/Sidebar';
+import styles from '@components/common/Navbar/Navbar.module.css';
 
 const navItem = [
   { name: 'Home' },
@@ -13,10 +15,15 @@ const navItem = [
 
 export const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const scrollPosition = useScrollPosition();
 
   return (
-    <nav className="absolute w-full">
-      <div className="flex justify-between items-center max-w-screen-xl mx-auto p-8 xl:p-12">
+    <nav
+      className={`absolute w-full p-8 xl:p-12 ${
+        scrollPosition && styles.scrolled
+      }`}
+    >
+      <div className="flex justify-between items-center max-w-screen-xl mx-auto">
         <img className="w-10 xl:w-14 z-10" src={logo} alt="Girish Daloso" />
 
         {/* Hamburger button for sidebar */}
