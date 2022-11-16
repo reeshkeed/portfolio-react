@@ -1,3 +1,5 @@
+import { BaseButton } from '@components/base/BaseButton';
+
 interface Props {
   project: {
     name: string;
@@ -30,6 +32,8 @@ export const ProjectCard = ({ project }: Props) => {
         <span className="text-secondary-500 mr-3">() =&gt;</span>
         {project.name}
       </p>
+
+      <BaseButton />
     </div>
   );
 };
